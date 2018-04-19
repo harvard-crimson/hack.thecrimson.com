@@ -169,6 +169,7 @@ a {
 #first-page {
     .container {
         padding: 0px 20px;
+        margin-top: 45px;
 
         @media only screen and (max-width: 425px) {
             width: 100%;
@@ -432,7 +433,7 @@ a {
 }
 
 #logo-img {
-    width: 45%;
+    width: 55%;
 }
 
 #faq-container {
@@ -469,11 +470,15 @@ a {
     }
 
     #logo-img {
-        width: 66%;
+        width: 80%;
     }
 
     #first-page {
         padding-top: 120px;
+
+        .container {
+            margin-top: 0px;
+        }
     }
 
     .fullscreen {
