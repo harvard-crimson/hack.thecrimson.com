@@ -13,7 +13,7 @@
     font-style: normal;
 }
 
-$dark-crimson: #6f272d;
+$dark-crimson: #a70500;
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -32,24 +32,84 @@ h2 {
     color: $dark-crimson;
 }
 
+a {
+    color: $dark-crimson;
+}
+
 #cash-prizes {
     display: flex;
     flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
 
+    .podium {
+        flex-grow: 1;
+        flex-basis: 0;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: flex-end;
+
+        div {
+            margin: 0px;
+            padding-top: 20px;
+            font-size: 75px;
+            color: white;
+        }
+
+        span {
+            margin-bottom: 10px;
+        }
+    }
+
+    #first {
+        div {
+            height: 200px;
+            background-color: #f9d984;
+        }
+    }
+
+    #second {
+        div {
+            height: 150px;
+            background-color: #cdcdcd;
+        }
+    }
+
+    #third {
+        div {
+            height: 100px;
+            background-color: #cb9b81;
+        }
+    }
     span {
         display: block;
+        font-size: 30px;
+        font-weight: bold;
     }
 
-    div:first-of-type {
-        flex-grow: 1;
-        text-align: right;
-        margin-right: 10px;
+    // div:first-of-type {
+    //     flex-grow: 1;
+    //     text-align: right;
+    //     margin-right: 10px;
+    // }
+
+    // div:last-of-type {
+    //     flex-grow: 1;
+    //     text-align: left;
+    //     margin-left: 10px;
+    // }
+
+    .first-prize {
+        font-size: 50px;
     }
 
-    div:last-of-type {
-        flex-grow: 1;
-        text-align: left;
-        margin-left: 10px;
+    .second-prize {
+        font-size: 45px;
+    }
+
+    .third-prize {
+        font-size: 40px;
     }
 }
 
@@ -64,10 +124,10 @@ h2 {
 }
 
 #schedule-lines {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
 
-    width: 100%;
+    // width: 100%;
     // span {
     //     display: block;
     // }
@@ -98,6 +158,7 @@ h2 {
 
     .container {
         max-width: 850px;
+        width: 100%;
         text-align: center;
         padding: 0px 20px;
         box-sizing: border-box;
@@ -107,7 +168,6 @@ h2 {
 
 #first-page {
     .container {
-        max-width: none;
         padding: 0px 20px;
 
         @media only screen and (max-width: 425px) {
@@ -117,32 +177,6 @@ h2 {
         span {
             display: block;
             font-size: 30px;
-        }
-
-        a {
-            background-color: $dark-crimson;
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 0px 20px;
-            height: 60px;
-            font-family: 'bariol';
-            text-transform: lowercase;
-            font-size: 40px;
-            text-align: center;
-            color: #fff;
-            cursor: pointer;
-            text-decoration: none;
-            position: relative;
-
-            top: 0px;
-            margin-top: 30px;
-
-            transition: all 0.5s;
-            &:hover {
-                top: -10px;
-            }
         }
     }
 
@@ -198,10 +232,12 @@ h2 {
     }
 
     #sponsor {
-        position: absolute;
+        position: relative;
+        margin-top: 30px;
         margin-bottom: 0px;
-        right: 50px;
-        bottom: 50px;
+        // right: 50px;
+        // bottom: 50px;
+        // width: 100%;
         padding: 0px 20px;
 
         @media only screen and (max-width: 425px) {
@@ -213,7 +249,7 @@ h2 {
             text-align: center;
         }
         p {
-            font-size: 25px;
+            font-size: 30px;
             display: inline;
         }
         img {
@@ -265,27 +301,48 @@ h2 {
 .schedule-line {
     display: flex;
     flex-direction: row;
+    // padding-bottom: 20px;
+    .divider {
+        display: block;
+        margin-left: 20px;
+        // padding-bottom: 20px;
+        border-left: 5px solid $dark-crimson;
+    }
 
     span {
         display: block;
-
         &:first-of-type {
-            flex-basis: 70px;
+            flex-basis: 90px;
             flex-shrink: 0;
             text-align: right;
-            margin-right: 10px;
+            // padding-right: 20px;
+            // padding-bottom: 20px;
+            // border-right: solid 5px $dark-crimson;
         }
-
         &:last-of-type {
             text-align: left;
-            margin-left: 10px;
+            white-space: nowrap;
+            margin-left: 20px;
+            margin-bottom: 20px;
         }
     }
+
+
+
+    &:last-of-type {
+        margin-bottom: 0px;
+
+        span:last-of-type {
+            margin-bottom: 0px;
+        }
+    }
+
 }
 
 .faq-item {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-align: left;
+    font-size: 20px;
     span {
         display: block;
 
@@ -300,6 +357,7 @@ h2 {
 #faq {
     height: auto;
     min-height: 100vh;
+    padding-top: 50px;
 
     h1 {
         margin-top: 30px;
@@ -309,4 +367,142 @@ h2 {
 #logo img {
     display: block;
     width: 100%;
+}
+
+.navbar {
+    z-index: 1000;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    height: 100px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    transition: background-color 1s;
+
+    .buttons {
+        max-width: 850px;
+        width: 100%;
+        margin: 0px auto;
+        display: flex;
+        justify-content: center;
+
+
+        a {
+            color: $dark-crimson;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 20px;
+            height: 60px;
+            text-transform: lowercase;
+            font-size: 30px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            position: relative;
+
+            top: 0px;
+
+            transition: all  1s;
+        }
+
+        #register {
+            color: white;
+            background-color: $dark-crimson;
+            border-radius: 30px;
+        }
+    }
+
+    &.scrolled {
+        background-color: $dark-crimson;
+
+        a {
+            color: white;
+        }
+        #register {
+            color: $dark-crimson;
+            background-color: white;
+        }
+    }
+}
+
+#logo-img {
+    width: 66%;
+}
+
+#faq-container {
+    display: flex;
+
+}
+
+#column-left {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-right: 10px;
+}
+
+#column-right {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .schedule-line {
+        span:last-of-type {
+            white-space: unset;
+        }
+    }
+}
+@media only screen and (max-width: 425px) {
+    .navbar {
+        .buttons {
+            a:not(#register) {
+                display: none;
+            }
+        }
+    }
+
+    #first-page {
+        padding-top: 120px;
+    }
+
+    .fullscreen {
+        margin-bottom: 50px;
+    }
+
+    .schedule-line {
+        span:last-of-type {
+            white-space: unset;
+        }
+
+        .time-container {
+            padding-bottom: 20px;
+        }
+    }
+
+    #faq-container {
+        flex-direction: column;
+    }
+
+    #column-left {
+        margin-right: 0px;
+    }
+
+    #column-right {
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #schedule {
+        h1 {
+            font-size: 60px;
+        }
+    }
 }
