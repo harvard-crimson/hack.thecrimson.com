@@ -1,144 +1,133 @@
-<!doctype html>
-<html>
-  <head>
-    <link rel='stylesheet' href='/css/normalize.css'>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel='stylesheet' href='/css/styles.css'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src='/scripts.js'></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="/crimson_logo.png">
-    <title>HackCrimson</title>
-  </head>
-  <body>
-    <div class='navbar'>
-      <div class='buttons'>
-        <a onclick="scrollToSection('#about');">about</a>
-        <a onclick="scrollToSection('#prizes');">prizes</a>
-        <a id='register' href='https://goo.gl/forms/YRZh5niEr6GYbwx53' target='_blank'>Register</a>
-        <a onclick="scrollToSection('#schedule');">schedule</a>
-        <a onclick="scrollToSection('#faq');">faq</a>
-      </div>
-    </div>
-    <div class='fullscreen' id='first-page'>
-      <div class='container'>
-        <img id='logo-img' src='/logo.png'>
-        <span>Saturday, April 28</span>
-        <span>10 AM to 10 PM</span>
-        <span>Grand Prize &mdash; $1000</span>
-        <div id='sponsor'>
-          <p>sponsored by</p>
-          <a href='https://www.kensho.com' target='_blank'><img src='/kensho.png'></a>
-        </div>
-      </div>
-    </div>
-    <div class='fullscreen' id='about'>
-      <div class='container'>
-        <h1>about</h1>
-        <p>HackCrimson is a hackathon brought to you by The Harvard Crimson and sponsored by Kensho.  It will be held on <b>Saturday, April 28 from 10 AM to 10 PM at 14 Plympton Street.</b></p>
+---
+title: HackCrimson
+---
 
-        <p>Come indulge in a day of Kensho-inspired projects surrounding web development, machine learning, and data visualization at The Harvard Crimson. <b>No prior experience necessary!</b> You can register as a team (of up to 5 people) or individually (and we will put you in a team!). Register <a href='https://goo.gl/forms/YRZh5niEr6GYbwx53' target='_blank'>here</a>.</p>
+<div class='navbar'>
+  <div class='buttons'>
+    <a onclick="scrollToSection('#about');">about</a>
+    <a onclick="scrollToSection('#prizes');">prizes</a>
+    <a id='register' href='https://goo.gl/forms/YRZh5niEr6GYbwx53' target='_blank'>Register</a>
+    <a onclick="scrollToSection('#schedule');">schedule</a>
+    <a onclick="scrollToSection('#faq');">faq</a>
+  </div>
+</div>
+<div class='fullscreen' id='first-page'>
+  <div class='container'>
+    <img id='logo-img' src='/logo.png'>
+    <span>Saturday, April 28</span>
+    <span>10 AM to 10 PM</span>
+    <span>Grand Prize &mdash; $1000</span>
+    <div id='sponsor'>
+      <p>sponsored by</p>
+      <a href='https://www.kensho.com' target='_blank'><img src='/kensho.png'></a>
+    </div>
+  </div>
+</div>
+<div class='fullscreen' id='about'>
+  <div class='container'>
+    <h1>about</h1>
+    <p>HackCrimson is a hackathon brought to you by The Harvard Crimson and sponsored by Kensho.  It will be held on <b>Saturday, April 28 from 10 AM to 10 PM at 14 Plympton Street.</b></p>
+
+    <p>Come indulge in a day of Kensho-inspired projects surrounding web development, machine learning, and data visualization at The Harvard Crimson. <b>No prior experience necessary!</b> You can register as a team (of up to 5 people) or individually (and we will put you in a team!). Register <a href='https://goo.gl/forms/YRZh5niEr6GYbwx53' target='_blank'>here</a>.</p>
+  </div>
+</div>
+<div class='fullscreen' id='prizes'>
+  <div class='container'>
+    <h1>Cash Prizes</h1>
+    <div id='cash-prizes'>
+      <div class='podium' id='second'>
+        <span>$250</span>
+        <div>2</div>
+      </div>
+      <div class='podium' id='first'>
+        <span>$1,000</span>
+        <div>1</div>
+      </div>
+      <div class='podium' id='third'>
+        <span>$100</span>
+        <div>3</div>
       </div>
     </div>
-    <div class='fullscreen' id='prizes'>
-      <div class='container'>
-        <h1>Cash Prizes</h1>
-        <div id='cash-prizes'>
-          <div class='podium' id='second'>
-            <span>$250</span>
-            <div>2</div>
-          </div>
-          <div class='podium' id='first'>
-            <span>$1,000</span>
-            <div>1</div>
-          </div>
-          <div class='podium' id='third'>
-            <span>$100</span>
-            <div>3</div>
-          </div>
+  </div>
+</div>
+<div class='fullscreen' id='schedule'>
+  <div class='container'>
+    <h1>schedule</h1>
+    <div id='schedule-lines'>
+      <div class='schedule-line'>
+        <span>10:00 AM</span><div class='divider'>&nbsp;</div>
+        <span>HackCrimson Registration Confirmation and <nobr>Sign-ins</nobr></span>
+      </div>
+      <div class='schedule-line'>
+        <span>10:30 AM</span><div class='divider'>&nbsp;</div>
+        <span>Introductions and Kensho Presentation</span>
+      </div>
+      <div class='schedule-line'>
+        <span>11:00 AM</span><div class='divider'>&nbsp;</div>
+        <span>Teams Review and Select Project Briefs</span>
+      </div>
+      <div class='schedule-line'>
+        <span>11:30 AM</span><div class='divider'>&nbsp;</div>
+        <span>Teams Assemble and Hacking Begins!</span>
+      </div>
+      <!--  <div class='schedule-line'>
+        <span class='invisible'>-</span><span>--</span>
+      </div> -->
+      <div class='schedule-line'>
+        <span>8:30 PM</span><div class='divider'>&nbsp;</div>
+        <span>Hacking Ends, Judging Begins</span>
+      </div>
+      <div class='schedule-line'>
+        <span>9:30 PM</span><div class='divider'>&nbsp;</div>
+        <span>Prize Winners Announced, Best Projects Presented</span>
+      </div>
+      <div class='schedule-line'>
+        <span>10:00 PM</span><div class='divider'>&nbsp;</div>
+        <span>HackCrimson Conclusion</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='fullscreen' id='faq'>
+  <div class='container'>
+    <h1>FAQ</h1>
+    <div id='faq-container'>
+      <div id='column-left'>
+        <div class='faq-item'>
+          <span>Where will HackCrimson be held?</span>
+          <span>HackCrimson will be held at The Harvard Crimson building, located on 14 Plympton Street.</span>
+        </div>
+        <div class='faq-item'>
+          <span>How long will HackCrimson be?</span>
+          <span>HackCrimson will be held for 12 hours, from 10 AM - 10 PM.</span>
+        </div>
+        <div class='faq-item'>
+          <span>How big can my team be?</span>
+          <span>Teams can consist of up to 5 people, including yourself.</span>
+        </div>
+        <div class='faq-item'>
+          <span>Do we need to stay for the whole time?</span>
+          <span>Feel free to come and go as needed - however, no extra hacking time will be provided and judging will occur at the same time for everyone.</span>
+        </div>
+      </div>
+      <div id='column-right'>
+        <div class='faq-item'>
+          <span>Will food be provided?</span>
+          <span>Yes, food will be provided.  You will be able to eat while hacking once the food arrives!</span>
+        </div>
+        <div class='faq-item'>
+          <span>Will there be prizes?  If so, what are they?</span>
+          <span>Yes. There will be three cash prizes of $1000, $250, and $100 for the top three winners.</span>
+        </div>
+        <div class='faq-item'>
+          <span>Who can I contact if I have any additional questions or concerns?</span>
+          <span>Shoot us an email at <a href='mailto:tech@thecrimson.com'>tech@thecrimson.com</a>!</span>
+        </div>
+        <div class='faq-item'>
+          <span>What is The Harvard Crimson?</span>
+          <span>The Harvard Crimson is the only breakfast-table daily newspaper in Cambridge, MA.  It is entirely student-run.  For more information, visit <a href='https://www.thecrimson.com' target='_blank'>thecrimson.com</a>, <a href='http://www.thecrimson.com/subscribe/' target='_blank'>subscribe</a> to our newsletter, and <a href='https://www.facebook.com/TheHarvardCrimson/' target='_blank'>like</a> us on Facebook!</span>
         </div>
       </div>
     </div>
-    <div class='fullscreen' id='schedule'>
-      <div class='container'>
-        <h1>schedule</h1>
-        <div id='schedule-lines'>
-          <div class='schedule-line'>
-            <span>10:00 AM</span><div class='divider'>&nbsp;</div>
-            <span>HackCrimson Registration Confirmation and <nobr>Sign-ins</nobr></span>
-          </div>
-          <div class='schedule-line'>
-            <span>10:30 AM</span><div class='divider'>&nbsp;</div>
-            <span>Introductions and Kensho Presentation</span>
-          </div>
-          <div class='schedule-line'>
-            <span>11:00 AM</span><div class='divider'>&nbsp;</div>
-            <span>Teams Review and Select Project Briefs</span>
-          </div>
-          <div class='schedule-line'>
-            <span>11:30 AM</span><div class='divider'>&nbsp;</div>
-            <span>Teams Assemble and Hacking Begins!</span>
-          </div>
-          <!--  <div class='schedule-line'>
-            <span class='invisible'>-</span><span>--</span>
-          </div> -->
-          <div class='schedule-line'>
-            <span>8:30 PM</span><div class='divider'>&nbsp;</div>
-            <span>Hacking Ends, Judging Begins</span>
-          </div>
-          <div class='schedule-line'>
-            <span>9:30 PM</span><div class='divider'>&nbsp;</div>
-            <span>Prize Winners Announced, Best Projects Presented</span>
-          </div>
-          <div class='schedule-line'>
-            <span>10:00 PM</span><div class='divider'>&nbsp;</div>
-            <span>HackCrimson Conclusion</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class='fullscreen' id='faq'>
-      <div class='container'>
-        <h1>FAQ</h1>
-        <div id='faq-container'>
-          <div id='column-left'>
-            <div class='faq-item'>
-              <span>Where will HackCrimson be held?</span>
-              <span>HackCrimson will be held at The Harvard Crimson building, located on 14 Plympton Street.</span>
-            </div>
-            <div class='faq-item'>
-              <span>How long will HackCrimson be?</span>
-              <span>HackCrimson will be held for 12 hours, from 10 AM - 10 PM.</span>
-            </div>
-            <div class='faq-item'>
-              <span>How big can my team be?</span>
-              <span>Teams can consist of up to 5 people, including yourself.</span>
-            </div>
-            <div class='faq-item'>
-              <span>Do we need to stay for the whole time?</span>
-              <span>Feel free to come and go as needed - however, no extra hacking time will be provided and judging will occur at the same time for everyone.</span>
-            </div>
-          </div>
-          <div id='column-right'>
-            <div class='faq-item'>
-              <span>Will food be provided?</span>
-              <span>Yes, food will be provided.  You will be able to eat while hacking once the food arrives!</span>
-            </div>
-            <div class='faq-item'>
-              <span>Will there be prizes?  If so, what are they?</span>
-              <span>Yes. There will be three cash prizes of $1000, $250, and $100 for the top three winners.</span>
-            </div>
-            <div class='faq-item'>
-              <span>Who can I contact if I have any additional questions or concerns?</span>
-              <span>Shoot us an email at <a href='mailto:tech@thecrimson.com'>tech@thecrimson.com</a>!</span>
-            </div>
-            <div class='faq-item'>
-              <span>What is The Harvard Crimson?</span>
-              <span>The Harvard Crimson is the only breakfast-table daily newspaper in Cambridge, MA.  It is entirely student-run.  For more information, visit <a href='https://www.thecrimson.com' target='_blank'>thecrimson.com</a>, <a href='http://www.thecrimson.com/subscribe/' target='_blank'>subscribe</a> to our newsletter, and <a href='https://www.facebook.com/TheHarvardCrimson/' target='_blank'>like</a> us on Facebook!</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+  </div>
+</div>
