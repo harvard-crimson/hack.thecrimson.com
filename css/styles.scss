@@ -520,6 +520,7 @@ a {
 
     &#last {
         border-bottom: none;
+        padding-bottom: 100px;
     }
 }
 
@@ -544,5 +545,42 @@ a {
         display: inline;
         color: $dark-crimson;
         font-weight: bold;
+    }
+}
+
+#rank {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    // position: fixed;
+    // bottom: 30px;
+    // right: 30px;
+
+    height: 60px;
+    width: 250px;
+    text-align: center;
+
+    border-radius: 30px;
+    text-decoration: none;
+    background-color: $dark-crimson;
+    color: white;
+}
+
+.footer-bar {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.footer {
+    max-width: 1000px;
+    padding: 0px 30px;
+    box-sizing: content-box;
+    margin: 0px auto;
+    text-align: right;
+    padding-bottom: 30px;
+
+    @media only screen and (max-width: 425px) {
+        text-align: center;
     }
 }
